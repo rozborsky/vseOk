@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  private canSeeChat: boolean = true;
+
+  private showWindow(): void {
+this.canSeeChat = false;
+  }
 }
