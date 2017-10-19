@@ -1,4 +1,4 @@
-<div class="chat">
+<div  *ngIf="isVisible; else showButtonBlock" class="chat">
   chat works!
   chat works!
   chat works!
@@ -20,3 +20,5 @@
   chat works!
   chat works!
 </div>
+<ng-template #showButtonBlock><button (click)="showChat()" class="btn">VO</button></ng-template>
+
