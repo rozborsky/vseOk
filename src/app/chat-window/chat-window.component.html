@@ -1,0 +1,4 @@
+<div class="chat-window">
+  <messages *ngIf="canShowMessages; else notLogged"></messages>
+  <ng-template #notLogged><login-panel (passVerification)="showMessages($event)"></login-panel></ng-template>
+</div>

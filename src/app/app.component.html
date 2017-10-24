@@ -1,5 +1,6 @@
 <div class="container-fluid">
-  <chat></chat>
+  <external-page></external-page>
+  
+  <chat-window *ngIf="isVisibleChatWindow; else showButton" (isVisibleChatWindow)="closeChatWindow($event)"></chat-window>
+  <ng-template #showButton><show-chat-button (isVisibleChatWindow)="showChatWindow($event)"></show-chat-button></ng-template>
 </div>
-
-
